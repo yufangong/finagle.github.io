@@ -13,11 +13,13 @@
     <link rel="alternate" href="https://finagle.github.io/blog/2018/11/13/release-notes/"/>
     <id>https://finagle.github.io/blog/2018/11/13/release-notes/</id>
     <published>2018-11-13T00:00:00Z</published>
-    <updated>2018-11-13T13:56:16-07:00</updated>
+    <updated>2018-11-13T13:58:22-07:00</updated>
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;h3&gt;&lt;a href="https://github.com/twitter/finagle/"&gt;Finagle&lt;/a&gt;&lt;/h3&gt;
+    <content type="html">&lt;p&gt;Halloween has come and gone and it&amp;rsquo;s already snowing here in the Rockies. Time to cuddle up with a warm compiler and check out the new edition of Twitter&amp;rsquo;s open source libraries!&lt;/p&gt;
+
+&lt;h3&gt;&lt;a href="https://github.com/twitter/finagle/"&gt;Finagle&lt;/a&gt;&lt;/h3&gt;
 
 &lt;h4&gt;New Features&lt;/h4&gt;
 
