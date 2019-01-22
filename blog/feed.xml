@@ -4,16 +4,450 @@
   <id>https://finagle.github.io/blog</id>
   <link href="https://finagle.github.io/blog"/>
   <link href="https://finagle.github.io/blog/blog/feed.xml" rel="self"/>
-  <updated>2018-11-13T00:00:00Z</updated>
+  <updated>2019-01-18T00:00:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
   <entry>
-    <title>November 2018 Relase Notes - Version 18.11.0 ❄️</title>
+    <title>Winter Update ❄️</title>
+    <link rel="alternate" href="https://finagle.github.io/blog/2019/01/18/fall-winter/"/>
+    <id>https://finagle.github.io/blog/2019/01/18/fall-winter/</id>
+    <published>2019-01-18T00:00:00Z</published>
+    <updated>2019-01-22T14:25:37-07:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;Winter is in full swing, a new year is upon us, and the &lt;a href="https://twitter.com/davidjrusek/status/1083452863739777024?s=20"&gt;coyotes&lt;/a&gt;
+are still doing their thing, and so are all of us here at Twitter. As part of your
+new year resolutions please make it a point to check out the
+&lt;a href="https://github.com/twitter/finagle/releases/latest"&gt;latest&lt;/a&gt;
+releases of our open source offerings.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Developer experience&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Reader, Writer and AsyncStream continue to make progress towards general use streaming use cases. Reader recently gained map and flatMap methods (&lt;a href="https://github.com/twitter/util/commit/ac15ad8bbd633aa5efd5e306d2dea2c40a50379e#diff-aee5b3c34d1f74bb32a0e4502ed6a988"&gt;1&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Finagle MySQL gained the ability to pin successive operations to a single session, enabling use cases where connection state is important for correctness.(&lt;a href="https://github.com/twitter/finagle/commit/87b3b781d0ba601d1fd91293741fc264264671f8#diff-d6f8b1cdbafc82ccae487a9b1f76478a"&gt;1&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Improved Java Compatibility (
+&lt;a href="https://github.com/twitter/finatra/commit/ba224757fba609bbf786ab42d9f3cb8eb81f80e9"&gt;1&lt;/a&gt;,
+&lt;a href="https://github.com/twitter/finatra/commit/f6c44cab87d1f9023e6028b76c61ce1920710a7b"&gt;2&lt;/a&gt;,
+&lt;a href="https://github.com/twitter/finagle/commit/e57d2a9156d72ada8a81a590714ece676e423ce6"&gt;3&lt;/a&gt;,
+&lt;a href="https://github.com/twitter/finagle/commit/30a8000c4a910134219fc1317cead9735ca97cbb"&gt;4&lt;/a&gt;,
+&lt;a href="https://github.com/twitter/finagle/commit/cff9aeddc0ae6ceb4c50cb8d67b3418a133d30f9"&gt;5&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Netty&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In the works for a while, we all but removed the last vestiges of Netty 3 with the use of Netty 4 cookies.&lt;/li&gt;
+&lt;li&gt;Upgraded to 4.1.31.Final (&lt;a href="https://github.com/twitter/finagle/commit/8e0f4b868c34259350fb0def2e7fee5d3d77fece"&gt;1&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Finatra&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Per-method filtering and access to ThriftMux headers are now available in Finatra by switching to a new way of constructing Controllers. Also, Finatra Thrift services now use TypeAgnostic filters instead of the custom ThriftFilters (&lt;a href="https://github.com/twitter/finatra/commit/9d891cd1f6f907c59ad9f40a7db20c4a2b33faf1"&gt;1&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thanks for following along. If you&amp;rsquo;d like to know more about any one of these
+updates, or if you have a question about them, join us on the
+&lt;a href="https://groups.google.com/forum/#!forum/finaglers"&gt;Finagle&lt;/a&gt; or
+&lt;a href="https://groups.google.com/forum/#!forum/finatra-users"&gt;Finatra&lt;/a&gt; mailing lists
+or hop on &lt;a href="https://gitter.im/twitter/finagle"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Catch you on the next release,&lt;/p&gt;
+
+&lt;p&gt;Dave and the Core Systems Libraries team&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>January 2019 Release Notes - Version 19.1.0 🎉</title>
+    <link rel="alternate" href="https://finagle.github.io/blog/2019/01/14/release-notes/"/>
+    <id>https://finagle.github.io/blog/2019/01/14/release-notes/</id>
+    <published>2019-01-14T00:00:00Z</published>
+    <updated>2019-01-15T14:42:17-07:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;Happy New Year folks! Hopefully new years resolutions are still on pace. In
+the meantime, let&amp;rsquo;s kick off 2019 with a fresh new release of libraries.&lt;/p&gt;
+
+&lt;h3&gt;&lt;a href="https://github.com/twitter/finagle/"&gt;Finagle&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h4&gt;New Features&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;finagle-core: &lt;code&gt;c.t.f.s.StackBasedServer&lt;/code&gt; has been changed to extend the
+&lt;code&gt;c.t.f.Stack.Transformable&lt;/code&gt; trait. This brings &lt;code&gt;StackBasedServer&lt;/code&gt; into parity
+with &lt;code&gt;c.t.f.c.StackBasedClient&lt;/code&gt;, which already extends the
+&lt;code&gt;Stack.Transformable&lt;/code&gt; trait. &lt;a href="https://github.com/twitter/finagle/commit/9f637b5e41b9ea77129c4a48f4327e3b51787526"&gt;9f637b5e&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-http: HttpMuxer propagates the close signal to the underlying handlers.
+&lt;a href="https://github.com/twitter/finagle/commit/6475680d241f3e9b026b3c3aa6eb94da8c1c37d4"&gt;6475680d&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-stats-core: introduce flag to allow logging metrics on service shutdown.
+&lt;a href="https://github.com/twitter/finagle/commit/4588bc1f0a64f3ff6ab1e241bb0726a79f72ca14"&gt;4588bc1f&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Breaking API Changes&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;finagle-core: The deprecated &lt;code&gt;c.t.f.b.ServerBuilder.stack&lt;/code&gt; method which takes a function
+has been removed. Uses of this method should be changed to use the c.t.f.b.ServerBuilder.stack
+method which takes a &lt;code&gt;c.t.f.s.StackBasedServer&lt;/code&gt; instead. &lt;a href="https://github.com/twitter/finagle/commit/a05e5e7b69d1b8237d8a6360d00c031172a2db0f"&gt;a05e5e7b&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-core: The type of &lt;code&gt;c.t.f.b.ServerConfig.nilServer&lt;/code&gt; has been changed from
+&lt;code&gt;Server\[Req, Rep\]&lt;/code&gt; to &lt;code&gt;StackBasedServer\[Req, Rep\]&lt;/code&gt;. &lt;a href="https://github.com/twitter/finagle/commit/4be953d433899b0dc4d4a6155283699c8cd8c06d"&gt;4be953d4&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-core: The access level of the &lt;code&gt;c.t.f.b.ServerBuilder.copy&lt;/code&gt; method has changed
+from protected to private. &lt;a href="https://github.com/twitter/finagle/commit/4be953d433899b0dc4d4a6155283699c8cd8c06d"&gt;4be953d4&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-core: The bridge type &lt;code&gt;c.t.f.b.Server&lt;/code&gt; has been removed. Users should
+change to use &lt;code&gt;c.t.f.ListeningServer&lt;/code&gt; instead. Uses of the previously
+deprecated &lt;code&gt;Server.localAddress&lt;/code&gt; should use &lt;code&gt;ListeningServer.boundAddress&lt;/code&gt;
+instead. &lt;a href="https://github.com/twitter/finagle/commit/eb66ee71b7054112ab6f4618e3e985d56aaa1f44"&gt;eb66ee71&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-core: The deprecated &lt;code&gt;c.t.f.t.Transport.localAddress&lt;/code&gt; and
+&lt;code&gt;c.t.f.t.Transport.remoteAddress&lt;/code&gt; methods are now final and can no longer
+be extended. Users should migrate to the respective &lt;code&gt;c.t.f.t.TransportContext&lt;/code&gt;
+methods. &lt;a href="https://github.com/twitter/finagle/commit/b85f43a0a80d53766eef22c16c5f7c3497b34e87"&gt;b85f43a0&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-thrift: The &lt;code&gt;c.t.f.t.ThriftRichClient.protocolFactory&lt;/code&gt; and
+&lt;code&gt;c.t.f.t.ThriftRichServer.protocolFactory&lt;/code&gt; methods have been removed. Users should
+switch to using &lt;code&gt;ThriftRichClient.clientParam.protocolFactory&lt;/code&gt; and
+&lt;code&gt;ThriftRichServer.serverParam.protocolFactory&lt;/code&gt; instead. In addition, implementations
+of the &lt;code&gt;protocolFactory&lt;/code&gt; method have been removed from the concrete &lt;code&gt;c.t.f.Thrift&lt;/code&gt;
+and &lt;code&gt;c.t.f.ThriftMux&lt;/code&gt; client and server. &lt;a href="https://github.com/twitter/finagle/commit/e33baf8210d0acd4f2fab9877acd1ceea287ab40"&gt;e33baf82&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Bug Fixes&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;finagle-core: Failed writes on Linux due to a remote peer disconnecting should now
+be properly seen as a &lt;code&gt;c.t.f.ChannelClosedException&lt;/code&gt; instead of a
+&lt;code&gt;c.t.f.UnknownChannelException&lt;/code&gt;. &lt;a href="https://github.com/twitter/finagle/commit/8f5774cbb8d8342ae5785f1bbeb66f5a07420810"&gt;8f5774cb&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-http: Compression level of 0 was failing on the server-side when speaking h2c.
+Updated so that it can handle a request properly. &lt;a href="https://github.com/twitter/finagle/commit/5f96fcb2b042f641de7db10428981b8bcb2a4e0a"&gt;5f96fcb2&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-thriftmux: A Java compatibility issue for users trying to call &lt;code&gt;withOpportunisticTls&lt;/code&gt;
+on &lt;code&gt;ThriftMux&lt;/code&gt; clients and servers has been fixed. &lt;a href="https://github.com/twitter/finagle/commit/e57d2a9156d72ada8a81a590714ece676e423ce6"&gt;e57d2a91&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Runtime Behavior Changes&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  finagle-core: &lt;code&gt;ServiceFactory.const&lt;/code&gt; propagates the close from the &lt;code&gt;ServiceFactory&lt;/code&gt;
+to the underlying service, instead of ignoring it. &lt;a href="https://github.com/twitter/finagle/commit/6475680d241f3e9b026b3c3aa6eb94da8c1c37d4"&gt;6475680d&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;&lt;a href="https://github.com/twitter/finatra/"&gt;Finatra&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h4&gt;Added&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;finatra-kafka-streams: SumAggregator and CompositeSumAggregator only support enhanced window
+aggregations for the sum operation. Deprecate SumAggregator and CompositeSumAggregator and create
+an AggregatorTransformer class that can perform arbitrary aggregations. &lt;a href="https://github.com/twitter/finatra/commit/f588970e04c976b549d1b95dfce8326139d4353e"&gt;f588970e&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finatra-streams: Open-source Finatra Streams. Finatra Streams is an integration
+between Kafka Streams and Finatra which we&amp;rsquo;ve been using internally at Twitter
+for the last year. The library is not currently open-source.
+&lt;a href="https://github.com/twitter/finatra/commit/47cce5462c5831a4bd1952f3c80b72987fda5552"&gt;47cce546&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;inject-server: Add lint rule to alert when deprecated &lt;code&gt;util-logging&lt;/code&gt; JUL flags from the
+&lt;code&gt;c.t.inject.server.DeprecatedLogging&lt;/code&gt; trait are user defined. This trait was mixed-in
+only for backwards compatibility when TwitterServer was moved to the slf4j-api and the flags are
+not expected to be configured. By default, &lt;code&gt;util-app&lt;/code&gt; based applications will fail to start if
+they are passed a flag value at startup which they do not define. Users should instead configure
+their chosen slf4j-api logging implementation directly. &lt;a href="https://github.com/twitter/finatra/commit/388bf8f9564dd67681640aeefed1e75d6b63b5b9"&gt;388bf8f9&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finatra-thrift: &lt;code&gt;c.t.finatra.thrift.Controllers&lt;/code&gt; now support per-method filtering and
+access to headers via &lt;code&gt;c.t.scrooge.{Request, Response}&lt;/code&gt; wrappers. To use this new
+functionality, create a &lt;code&gt;Controller&lt;/code&gt; which extends the
+&lt;code&gt;c.t.finatra.thrift.Controller(SomeThriftService)&lt;/code&gt; abstract class instead of constructing a
+&lt;code&gt;Controller&lt;/code&gt; that mixes in the &lt;code&gt;SomeThriftService.BaseServiceIface&lt;/code&gt; trait. With this, you can now
+provide implementations in form of &lt;code&gt;c.t.scrooge.Request&lt;/code&gt;/&lt;code&gt;c.t.scrooge.Response&lt;/code&gt; wrappers by calling
+the &lt;code&gt;handle(ThriftMethod)&lt;/code&gt; method. Note that a &lt;code&gt;Controller&lt;/code&gt; constructed this way cannot also
+extend a &lt;code&gt;BaseServiceIface&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;handle(SomeMethod).filtered(someFilter).withFn { req: Request[SomeMethod.Args] =&amp;gt;
+  val requestHeaders = req.headers
+  // .. implementation here
+
+  // response: Future[Response[SomeMethod.SuccessType]]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that if &lt;code&gt;Request&lt;/code&gt;/&lt;code&gt;Response&lt;/code&gt; based implementations are used the types on any
+existing &lt;code&gt;ExceptionMappers&lt;/code&gt; should be adjusted accordingly. Also, if a &lt;code&gt;DarkTrafficFilterModule&lt;/code&gt;
+was previously used, it must be swapped out for a &lt;code&gt;ReqRepDarkTrafficFilterModule&lt;/code&gt;
+&lt;a href="https://github.com/twitter/finatra/commit/9d891cd1f6f907c59ad9f40a7db20c4a2b33faf1"&gt;9d891cd1&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Changed&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;inject-core, inject-server: Remove deprecated &lt;code&gt;@Bind&lt;/code&gt; support from test mixins. Users should
+instead prefer using the &lt;a href="https://twitter.github.io/finatra/user-guide/testing/bind_dsl.html"&gt;bind[T]&lt;/a&gt;
+DSL in tests. &lt;a href="https://github.com/twitter/finatra/commit/841f6974864f84f4940f68a4b4145259b5c81933"&gt;841f6974&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;inject-app: Remove deprecated &lt;code&gt;bind\[T\]&lt;/code&gt; DSL methods from c.t.inject.app.BindDSL.&lt;/p&gt;
+
+&lt;p&gt;Instead of:&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;injector.bind[T](instance)
+injector.bind[T, Ann](instance)
+injector.bind[T](ann, instance)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Users should instead use the more expressive forms of these methods, e.g.,:&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;injector.bind[T].toInstance(instance)
+injector.bind[T].annotatedWith[Ann].toInstance(instance)
+injector.bind[T].annotatedWith(ann).toInstance(instance)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;which more closely mirrors the scala-guice binding DSL. &lt;a href="https://github.com/twitter/finatra/commit/2690003d8a79a520f46972ab05945c9381de0e7a"&gt;2690003d&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finatra-thrift: For services that wish to support dark traffic over
+&lt;code&gt;c.t.scrooge.Request&lt;/code&gt;/&lt;code&gt;c.t.scrooge.Response&lt;/code&gt;-based services, a new dark traffic module is
+available: &lt;code&gt;c.t.finatra.thrift.modules.ReqRepDarkTrafficFilterModule&lt;/code&gt; &lt;a href="https://github.com/twitter/finatra/commit/9d891cd1f6f907c59ad9f40a7db20c4a2b33faf1"&gt;9d891cd1&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finatra-thrift: Creating a &lt;code&gt;c.t.finatra.thrift.Controller&lt;/code&gt; that extends a
+&lt;code&gt;ThriftService.BaseServiceIface&lt;/code&gt; has been deprecated. See the related bullet point in &amp;ldquo;Added&amp;rdquo; with
+the corresponding PHAB_ID to this one for how to migrate. &lt;a href="https://github.com/twitter/finatra/commit/9d891cd1f6f907c59ad9f40a7db20c4a2b33faf1"&gt;9d891cd1&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;inject-core, inject-server: Remove deprecated &lt;code&gt;WordSpec&lt;/code&gt; testing utilities. The framework
+default ScalaTest testing style is &lt;code&gt;FunSuite&lt;/code&gt; though users are free to mix their testing
+style of choice with the framework provided test mixins as per the
+&lt;a href="https://twitter.github.io/finatra/user-guide/testing/mixins.html"&gt;documentation&lt;/a&gt;.
+&lt;a href="https://github.com/twitter/finatra/commit/41767c6ebd19488bf8140bda987ba19055313d31"&gt;41767c6e&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finatra-thrift: Instead of failing (potentially silently)
+&lt;code&gt;c.t.finatra.thrift.routing.ThriftWarmup&lt;/code&gt; now explicitly checks that it is
+using a properly configured &lt;code&gt;c.t.finatra.thrift.routing.Router&lt;/code&gt; &lt;a href="https://github.com/twitter/finatra/commit/e2dc8b300f6dcd4e861b0e4320f1d5cb5316e19a"&gt;e2dc8b30&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finatra-inject: &lt;code&gt;c.t.finatra.inject.server.PortUtils&lt;/code&gt; has been modified to
+work with &lt;code&gt;c.t.f.ListeningServer&lt;/code&gt; only. Methods which worked with the
+now-removed &lt;code&gt;c.t.f.b.Server&lt;/code&gt; have been modified or removed.
+&lt;a href="https://github.com/twitter/finatra/commit/642d7260b5282e3be2fb76ab8182b6504bb1c20d"&gt;642d7260&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finatra-kafka-streams: Finatra Queryable State methods currently require the window size
+to be passed into query methods for windowed key value stores. This is unnecessary, as
+the queryable state class can be passed the window size at construction time. We also now
+save off all FinatraKeyValueStores in a global manager class to allow query services
+(e.g. thrift) to access the same KeyValueStore implementation that the FinatraTransformer
+is using. &lt;a href="https://github.com/twitter/finatra/commit/c51e174b1869c6abd7dfbd9a5965b2f27a4e5cf9"&gt;c51e174b&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Fixed&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  finatra-kafka-streams: Fix bug where KeyValueStore#isOpen was throwing an
+exception when called on an uninitialized key value store
+&lt;a href="https://github.com/twitter/finatra/commit/d3f833a14ef6efdd521fcd7425fcac210757d620"&gt;d3f833a1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;&lt;a href="https://github.com/twitter/scrooge/"&gt;Scrooge&lt;/a&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  Update asm, cglib, jmock dependencies &lt;a href="https://github.com/twitter/scrooge/commit/688cd29e0a6421dca5e43a081bf5f9d9b8c02039"&gt;688cd29e&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;&lt;a href="https://github.com/twitter/twitter-server/"&gt;Twitter Server&lt;/a&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  Propagate the admin server&amp;rsquo;s shutdown to the handlers that are registered with the admin server.
+&lt;a href="https://github.com/twitter/twitter-server/commit/8a164d46d68749310f68b207d8decd7d10986afa"&gt;8a164d46&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;&lt;a href="https://github.com/twitter/util/"&gt;Util&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h4&gt;New Features&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  util-core: Added Reader.map/flatMap to transform Reader[A] to Reader[B]. Added &lt;code&gt;fromFuture()&lt;/code&gt;
+and &lt;code&gt;value()&lt;/code&gt; in the Reader object to construct a new Reader. &lt;a href="https://github.com/twitter/util/commit/ac15ad8bbd633aa5efd5e306d2dea2c40a50379e"&gt;ac15ad8b&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Breaking API Changes&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;util-core: The implicit conversions classes in &lt;code&gt;c.t.conversions.SomethingOps&lt;/code&gt; have been
+renamed to have unique names. This allows them to be used together with wildcard imports.
+See Github issue (&lt;a href="https://github.com/twitter/util/issues/239"&gt;https://github.com/twitter/util/issues/239&lt;/a&gt;). &lt;a href="https://github.com/twitter/util/commit/2d5d6da989ab83e8701b9f57ae0708a5851beb07"&gt;2d5d6da9&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;util-core: Both &lt;code&gt;c.t.io.Writer.FailingWriter&lt;/code&gt; and &lt;code&gt;c.t.io.Writer.fail&lt;/code&gt; were removed. Build your
+own instance should you need to. &lt;a href="https://github.com/twitter/util/commit/63815225ef894029bf107c1c2b4e17182e515994"&gt;63815225&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>December 2018 Release Notes - Version 18.12.0 🧤</title>
+    <link rel="alternate" href="https://finagle.github.io/blog/2018/12/18/release-notes/"/>
+    <id>https://finagle.github.io/blog/2018/12/18/release-notes/</id>
+    <published>2018-12-18T00:00:00Z</published>
+    <updated>2019-01-15T14:42:17-07:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;It&amp;rsquo;s hot chocolate season in the big apple.  That means mittens, ice-skating,
+and curling up by the radiator.  Grab your puffer, it&amp;rsquo;s the most beautiful time
+of the year.&lt;/p&gt;
+
+&lt;h3&gt;&lt;a href="https://github.com/twitter/finagle/"&gt;Finagle&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h4&gt;New Features&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;finagle-redis: Add support for the new stream API released in Redis 5.0. &lt;a href="https://github.com/twitter/finagle/commit/ba578c1445b2e241687ad3c89eec4f3d93431a76"&gt;ba578c14&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-core: Add Java compatibility for &lt;code&gt;c.t.f.Filter.TypeAgnostic.Identity&lt;/code&gt;
+via &lt;code&gt;c.t.f.Filter.typeAgnosticIdentity()&lt;/code&gt;. &lt;a href="https://github.com/twitter/finagle/commit/cff9aeddc0ae6ceb4c50cb8d67b3418a133d30f9"&gt;cff9aedd&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-core: Add Java compatibility for &lt;code&gt;c.t.f.Name&lt;/code&gt; through &lt;code&gt;Names&lt;/code&gt;.
+&lt;a href="https://github.com/twitter/finagle/commit/30a8000c4a910134219fc1317cead9735ca97cbb"&gt;30a8000c&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-core: Introduce a &lt;code&gt;StackServer.withStack&lt;/code&gt; overload that
+makes modifying the existing &lt;code&gt;Stack&lt;/code&gt; easier when using method chaining.
+&lt;a href="https://github.com/twitter/finagle/commit/f1a980cfdb780963d1e4e146d9031a93b43b107d"&gt;f1a980cf&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-stats: Split the implementation and &lt;code&gt;ServiceLoading&lt;/code&gt; into separate modules.
+The implementation is in &lt;code&gt;finagle-stats-core&lt;/code&gt;. This is backwards compatible
+for existing users of &lt;code&gt;finagle-stats&lt;/code&gt; while allowing new usages built on top.
+&lt;a href="https://github.com/twitter/finagle/commit/b9fe5c8d41e7246e0dda31e9c178ae0d7d09c571"&gt;b9fe5c8d&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-thrift: Add &lt;code&gt;c.t.finagle.thrift.MethodMetadata&lt;/code&gt; which provides a &lt;code&gt;LocalContext&lt;/code&gt; Key
+for setting information about the current Thrift method and an accessor for retrieving
+the currently set value. &lt;a href="https://github.com/twitter/finagle/commit/7b22e4efb5efd14296f2a080b1eb2ccab38db804"&gt;7b22e4ef&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-thrift: Update &lt;code&gt;c.t.finagle.thrift.MethodMetadata&lt;/code&gt; to provide an
+&lt;code&gt;asCurrent&lt;/code&gt; method to set the current &lt;code&gt;c.t.finagle.thrift.MethodMetadata&lt;/code&gt; in the
+&lt;code&gt;LocalContext&lt;/code&gt;. &lt;a href="https://github.com/twitter/finagle/commit/f46e1f771477102c93f4f82a54d0d1292a4dffba"&gt;f46e1f77&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Breaking API Changes&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;finagle-core: The &lt;code&gt;c.t.u.Closable&lt;/code&gt; trait has been removed from
+&lt;code&gt;c.t.f.t.TransportContext&lt;/code&gt;, as well as the &lt;code&gt;close&lt;/code&gt; and &lt;code&gt;onclose&lt;/code&gt; methods. Uses of
+these methods within &lt;code&gt;TransportContext&lt;/code&gt; should be changed to use the corresponding
+methods on &lt;code&gt;c.t.f.t.Transport&lt;/code&gt; instead. &lt;a href="https://github.com/twitter/finagle/commit/b8b850bb9e37449854f4c983bbc8f821987cdb59"&gt;b8b850bb&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-core: The deprecated &lt;code&gt;c.t.f.t.Transport.peerCertificate&lt;/code&gt; method on the &lt;code&gt;Transport&lt;/code&gt; class
+(not the &lt;code&gt;Transport.peerCertificate&lt;/code&gt; Finagle context) has been removed. Uses of this
+method should be changed to use &lt;code&gt;c.t.f.t.TransportContext.peerCertificate&lt;/code&gt; instead.
+&lt;a href="https://github.com/twitter/finagle/commit/ab0432b4a56f993802c68af9b3633f0b461ec97a"&gt;ab0432b4&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-core: The deprecated &lt;code&gt;c.t.f.t.TransportContext.status&lt;/code&gt; method has been removed
+from &lt;code&gt;TransportContext&lt;/code&gt;. Uses of this method should be changed to use
+&lt;code&gt;c.t.f.t.Transport.status&lt;/code&gt; instead. &lt;a href="https://github.com/twitter/finagle/commit/fd97536f63a3f72c868fa4ae5e17772b21ccfc14"&gt;fd97536f&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-mysql: &lt;code&gt;c.t.f.m.Charset&lt;/code&gt; has been renamed to &lt;code&gt;c.t.f.m.MysqlCharset&lt;/code&gt; to resolve
+any ambiguity between it and the &lt;code&gt;Charset&lt;/code&gt; &lt;code&gt;Stack&lt;/code&gt; parameter. &lt;a href="https://github.com/twitter/finagle/commit/05354cd55a2307d51b9cec24bd747786cd6db068"&gt;05354cd5&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-mysql: All &lt;code&gt;Stack&lt;/code&gt; params (&lt;code&gt;Charset&lt;/code&gt;, &lt;code&gt;Credentials&lt;/code&gt;, &lt;code&gt;Database&lt;/code&gt;, &lt;code&gt;FoundRows&lt;/code&gt;,
+&lt;code&gt;MaxConcurrentPrepareStatements&lt;/code&gt;, &lt;code&gt;UnsignedColumns&lt;/code&gt;) have been moved to the
+&lt;code&gt;com.twitter.finagle.mysql.param&lt;/code&gt; namespace. &lt;a href="https://github.com/twitter/finagle/commit/d30c5549500e9e6876647a9365823ceae1cddd0b"&gt;d30c5549&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-mysql: The deprecated &lt;code&gt;c.t.f.m.Client.apply(factory, statsReceiver)&lt;/code&gt; method
+has been removed. &lt;a href="https://github.com/twitter/finagle/commit/17747e1a969ee5a39c45852ca3d5486cb9600c10"&gt;17747e1a&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-mysql: The &lt;code&gt;c.t.f.m.Handshake&lt;/code&gt; class and companion object have been made
+private. &lt;a href="https://github.com/twitter/finagle/commit/20c8d50f248d8ef3f32c5dc3140f37c69ec726dc"&gt;20c8d50f&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-http: Rename the toggle &amp;lsquo;c.t.f.h.UseH2CClients&amp;rsquo; to &amp;lsquo;c.t.f.h.UseH2CClients2&amp;rsquo;.
+&lt;a href="https://github.com/twitter/finagle/commit/43c0b69c04be6ea31e5eaf6feb0fd9bbd1856f77"&gt;43c0b69c&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Runtime Behavior Changes&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;finagle: Upgrade to Netty 4.1.31.Final and netty-tcnative 2.0.19.Final. &lt;a href="https://github.com/twitter/finagle/commit/8e0f4b868c34259350fb0def2e7fee5d3d77fece"&gt;8e0f4b86&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-base-http: The &lt;code&gt;DefaultHeaderMap&lt;/code&gt; will replace &lt;code&gt;obs-fold&lt;/code&gt; ( CRLF 1*(SP/HTAB) ) in
+inserted header values. &lt;a href="https://github.com/twitter/finagle/commit/51c4f789f106a8ca433956b72a6d478c2189f5f0"&gt;51c4f789&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;&lt;a href="https://github.com/twitter/finatra/"&gt;Finatra&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h4&gt;Added&lt;/h4&gt;
+
+&lt;h4&gt;Changed&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;finatra-thrift: Instead of failing (potentially silently)
+&lt;code&gt;c.t.finatra.thrift.routing.ThriftWarmup&lt;/code&gt; now explicitly checks that it is
+using a properly configured &lt;code&gt;c.t.finatra.thrift.routing.Router&lt;/code&gt; &lt;a href="https://github.com/twitter/finatra/commit/e2dc8b300f6dcd4e861b0e4320f1d5cb5316e19a"&gt;e2dc8b30&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finatra-thrift: &lt;code&gt;c.t.finatra.thrift.Controller&lt;/code&gt; is now an abstract class
+rather than a trait. &lt;a href="https://github.com/twitter/finatra/commit/09c9bbb13d19a25478c34b7e0a02883ebe26be0a"&gt;09c9bbb1&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finatra-thrift: &lt;code&gt;c.t.finatra.thrift.internal.ThriftMethodService&lt;/code&gt; is now
+private. &lt;a href="https://github.com/twitter/finatra/commit/53dc05016196743cffcc7235b1625378468ee584"&gt;53dc0501&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finatra-thrift: &lt;code&gt;c.t.finatra.thrift.exceptions.FinatraThriftExceptionMapper&lt;/code&gt; and
+&lt;code&gt;c.t.finatra.thrift.exceptions.FinatraJavaThriftExceptionMapper&lt;/code&gt; now extend
+&lt;code&gt;ExceptionManager[Throwable, Nothing]&lt;/code&gt; since the return type was never used. They are
+now also final. &lt;a href="https://github.com/twitter/finatra/commit/dc894547390a1130414a15594f55b3828a05ffed"&gt;dc894547&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finatra-thrift: Remove &lt;code&gt;c.t.finatra.thrift.routing.JavaThriftRouter#beforeFilter&lt;/code&gt;. This method
+adds too much confusion to the Router API and users are encouraged to instead apply their
+TypeAgnostic Filters directly to the resultant &lt;code&gt;Service[-R, +R]&lt;/code&gt;  by overriding the
+&lt;code&gt;c.t.finatra.thrift.AbstractThriftServer#configureService&lt;/code&gt; method instead. &lt;a href="https://github.com/twitter/finatra/commit/b0cb8eaf7107c72ccb221aea588f06af20ed40d9"&gt;b0cb8eaf&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finatra-thrift: &lt;code&gt;c.t.finagle.Filter.TypeAgnostic&lt;/code&gt; filters are now the standard type of filter
+that can be added by configuring a &lt;code&gt;ThriftRouter&lt;/code&gt;. &lt;code&gt;c.t.finatra.thrift.ThriftFilter&lt;/code&gt; has been
+deprecated. &lt;a href="https://github.com/twitter/finatra/commit/6e93b9cc415ed25e374a4207a84328a59036bcd9"&gt;6e93b9cc&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finatra-thrift: &lt;code&gt;c.t.finatra.thrift.ThriftRequest&lt;/code&gt; has been deprecated. All of the information
+contained in a ThriftRequest can be found in other ways:
+&lt;code&gt;methodName&lt;/code&gt; -&amp;gt; &lt;code&gt;Method.current.get.name&lt;/code&gt;
+&lt;code&gt;traceId&lt;/code&gt;    -&amp;gt; &lt;code&gt;Trace.id&lt;/code&gt;
+&lt;code&gt;clientId&lt;/code&gt;   -&amp;gt; &lt;code&gt;ClientId.current&lt;/code&gt;
+&lt;a href="https://github.com/twitter/finatra/commit/6e93b9cc415ed25e374a4207a84328a59036bcd9"&gt;6e93b9cc&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Fixed&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;finatra-http: Validate headers to prevent header injection vulnerability. &lt;a href="https://github.com/twitter/finatra/commit/8a9250002d2d0676b3ff82ceaa9c5260772d7c0c"&gt;8a925000&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Closed&lt;/h4&gt;
+
+&lt;h3&gt;&lt;a href="https://github.com/twitter/scrooge/"&gt;Scrooge&lt;/a&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;scrooge-generator: Set a &lt;code&gt;LocalContext&lt;/code&gt; value with the current Thrift method in the
+generated Java and Scala code such that the application &lt;code&gt;Service[-R, +R]&lt;/code&gt; being executed has
+access to information about the current Thrift method being invoked. &lt;a href="https://github.com/twitter/scrooge/commit/09da33978159fc4f0ac95848adee3b09ae64326b"&gt;09da3397&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;&lt;a href="https://github.com/twitter/twitter-server/"&gt;Twitter Server&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;No Changes&lt;/p&gt;
+
+&lt;h3&gt;&lt;a href="https://github.com/twitter/util/"&gt;Util&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h4&gt;New Features&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;util-core: Provide a way to listen for stream termination to &lt;code&gt;c.t.util.Reader&lt;/code&gt;, &lt;code&gt;Reader#onClose&lt;/code&gt;
+which is satisfied when the stream is discarded or read until the end. &lt;a href="https://github.com/twitter/util/commit/3b1434e2b59a4f8df89c408ed442abb738e3a6a6"&gt;3b1434e2&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;util-core: Conversions in &lt;code&gt;c.t.conversions&lt;/code&gt; have new implementations
+that follow a naming scheme of &lt;code&gt;SomethingOps&lt;/code&gt;. Where possible the implementations
+are &lt;code&gt;AnyVal&lt;/code&gt; based avoiding allocations for the common usage pattern.
+&lt;a href="https://github.com/twitter/util/commit/ee56e5f2418d5d6540d37268436ff6f47520edaf"&gt;ee56e5f2&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;percent&lt;/code&gt; is now &lt;code&gt;PercentOps&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;storage&lt;/code&gt; is now &lt;code&gt;StorageUnitOps&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;string&lt;/code&gt; is now &lt;code&gt;StringOps&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;thread&lt;/code&gt; is now &lt;code&gt;ThreadOps&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;time&lt;/code&gt; is now &lt;code&gt;DurationOps&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;u64&lt;/code&gt; is now &lt;code&gt;U64Ops&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Bug Fixes&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;util-core: Fixed a bug where tail would sometimes return Some empty AsyncStream instead of None.
+&lt;a href="https://github.com/twitter/util/commit/1dc614bc7adf236ffe1e92b45fac35ea3241f6b0"&gt;1dc614bc&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Deprecations&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;util-core: Conversions in &lt;code&gt;c.t.conversions&lt;/code&gt; have been deprecated in favor of &lt;code&gt;SomethingOps&lt;/code&gt;
+versions. Where possible the implementations are &lt;code&gt;AnyVal&lt;/code&gt; based and use implicit classes
+instead of implicit conversions. &lt;a href="https://github.com/twitter/util/commit/ee56e5f2418d5d6540d37268436ff6f47520edaf"&gt;ee56e5f2&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;percent&lt;/code&gt; is now &lt;code&gt;PercentOps&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;storage&lt;/code&gt; is now &lt;code&gt;StorageUnitOps&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;string&lt;/code&gt; is now &lt;code&gt;StringOps&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;thread&lt;/code&gt; is now &lt;code&gt;ThreadOps&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;time&lt;/code&gt; is now &lt;code&gt;DurationOps&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;u64&lt;/code&gt; is now &lt;code&gt;U64Ops&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Breaking API Changes&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;util-core: Experimental &lt;code&gt;c.t.io.exp.MinThroughput&lt;/code&gt; utilities were removed.  &lt;a href="https://github.com/twitter/util/commit/d9c5e4a3fbb383114bc5aad73754ed9fef6f4dd2"&gt;d9c5e4a3&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;util-core: Deleted &lt;code&gt;c.t.io.Reader.Null&lt;/code&gt;, which was incompatible with &lt;code&gt;Reader#onClose&lt;/code&gt; semantics.
+&lt;code&gt;c.t.io.Reader#empty[Nothing]&lt;/code&gt; is a drop-in replacement. &lt;a href="https://github.com/twitter/util/commit/3b1434e2b59a4f8df89c408ed442abb738e3a6a6"&gt;3b1434e2&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;util-core: Removed &lt;code&gt;c.t.util.U64&lt;/code&gt; bits. Use &lt;code&gt;c.t.converters.u64._&lt;/code&gt; instead.  &lt;a href="https://github.com/twitter/util/commit/8034e5577c953c2b99836865cd9cf6da652aea71"&gt;8034e557&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>November 2018 Release Notes - Version 18.11.0 ❄️</title>
     <link rel="alternate" href="https://finagle.github.io/blog/2018/11/13/release-notes/"/>
     <id>https://finagle.github.io/blog/2018/11/13/release-notes/</id>
     <published>2018-11-13T00:00:00Z</published>
-    <updated>2018-11-13T16:14:20-07:00</updated>
+    <updated>2019-01-15T14:42:17-07:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -349,268 +783,6 @@ or hop on &lt;a href="https://gitter.im/twitter/finagle"&gt;Gitter&lt;/a&gt;.&lt
 &lt;p&gt;Happy coding,&lt;/p&gt;
 
 &lt;p&gt;Neuman and the Core Systems Libraries team&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>TravisCI Migration for the Finagle Org 🔧</title>
-    <link rel="alternate" href="https://finagle.github.io/blog/2018/10/03/travis-ci/"/>
-    <id>https://finagle.github.io/blog/2018/10/03/travis-ci/</id>
-    <published>2018-10-03T00:00:00Z</published>
-    <updated>2018-11-13T10:01:57-07:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;TravisCI &lt;a href="https://blog.travis-ci.com/2018-05-02-open-source-projects-on-travis-ci-com-with-github-apps"&gt;announced&lt;/a&gt; that it is moving open source projects from &lt;a href="https://travis-ci.org/"&gt;travis-ci.org&lt;/a&gt; to &lt;a href="https://travis-ci.com/"&gt;travis-ci.com&lt;/a&gt; which will use &lt;a href="https://developer.github.com/v3/apps/"&gt;Github Apps&lt;/a&gt; for a tigther integration with Github.&lt;/p&gt;
-
-&lt;p&gt;We plan on working with TravisCI to migrate the entirety of the &lt;a href="https://github.com/finagle"&gt;Finagle Org&lt;/a&gt; (&lt;a href="https://github.com/finagle"&gt;github.com/finagle&lt;/a&gt;). However, we wanted to alert the community that as part of this move, repositories under the &lt;a href="https://github.com/finagle"&gt;Finagle Org&lt;/a&gt; will &lt;strong&gt;lose their TravisCI build history&lt;/strong&gt;. We don&amp;rsquo;t expect that this is a big deal for projects in the org but wanted to give folks a heads up.&lt;/p&gt;
-
-&lt;p&gt;We expect this transition to happen in the next few weeks. Please let us know if you have any questions or concerns!&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;Want to know more or have a question? Ask away at our &lt;a href="https://groups.google.com/forum/#!forum/finaglers"&gt;Finagle&lt;/a&gt; or
-&lt;a href="https://groups.google.com/forum/#!forum/finatra-users"&gt;Finatra&lt;/a&gt; mailing lists or hop on &lt;a href="https://gitter.im/twitter/finagle"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Christopher Coco and the Core Systems Libraries team&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>⛱️ September 2018 Point Release Notes 🐚 — Version 18.9.1</title>
-    <link rel="alternate" href="https://finagle.github.io/blog/2018/09/27/point-release-notes/"/>
-    <id>https://finagle.github.io/blog/2018/09/27/point-release-notes/</id>
-    <published>2018-09-27T00:00:00Z</published>
-    <updated>2018-11-13T10:01:57-07:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;September is beach season here in the Bay Area, and it looks like our release earlier
-this month got caught in a wash cycle. So, we&amp;rsquo;ve made a point release.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;See below for details on the &lt;code&gt;util-slf4j-api&lt;/code&gt; dependency fix for the reason
-why we decided to do a point release.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/twitter/finagle/releases/tag/finagle-18.9.1"&gt;Finagle 18.9.1&lt;/a&gt;,
-&lt;a href="https://github.com/twitter/finatra/releases/tag/finatra-18.9.1"&gt;Finatra 18.9.1&lt;/a&gt;,
-&lt;a href="https://github.com/twitter/scrooge/releases/tag/scrooge-18.9.1"&gt;Scrooge 18.9.1&lt;/a&gt;,
-&lt;a href="https://github.com/twitter/twitter-server/releases/tag/twitter-server-18.9.1"&gt;TwitterServer 18.9.1&lt;/a&gt;,
-and &lt;a href="https://github.com/twitter/util/releases/tag/util-18.9.1"&gt;Util 18.9.1&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3&gt;&lt;a href="https://github.com/twitter/finagle/"&gt;Finagle&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h4&gt;Breaking API Changes&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;finagle-base-http: &lt;code&gt;DefaultHeaderMap&lt;/code&gt; now validates HTTP Header names and
-values in &lt;code&gt;add&lt;/code&gt; and &lt;code&gt;set&lt;/code&gt;. &lt;code&gt;addUnsafe&lt;/code&gt; and &lt;code&gt;setUnsafe&lt;/code&gt; have been created to
-allow adding and setting headers without validation. &lt;a href="https://github.com/twitter/finagle/commit/3454f95dd3623b44e8de725fed7e29d4b84da45d"&gt;3454f95d&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;finagle-core: Remove slow host detection from &lt;code&gt;ThresholdFailureDetector&lt;/code&gt;.
-&lt;a href="https://github.com/twitter/finagle/commit/c05f583224d570f92afe0b1520e3769b80b0e61b"&gt;c05f5832&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;Runtime Behavior Changes&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;finagle-core: When Finagle would exhaust a retry budget with an exception that was
-not a &lt;code&gt;FailureFlags&lt;/code&gt;, previously it would wrap that exception with a non-retryable
-failure. This lead to surprising behavior for users. Those exceptions will no longer
-be wrapped. &lt;a href="https://github.com/twitter/finagle/commit/4ece3d2aa5e893ad11969c93e981294d6a6ed754"&gt;4ece3d2a&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;finagle-http: The finagle HTTP clients and servers now consider a &lt;code&gt;Retry-After: 0&lt;/code&gt;
-header to be a retryable nack. Servers will set this header when the response is
-a retryable failure, and clients will interpret responses with this header as a
-Failure.RetryableNackFailure. &lt;a href="https://github.com/twitter/finagle/commit/3c3fedc620cd010bfe524b27c54d7c91279a2200"&gt;3c3fedc6&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;&lt;a href="https://github.com/twitter/finatra/"&gt;Finatra&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h4&gt;Changed&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;http/thrift: Update Library registry route information to include controller class name.
-&lt;a href="https://github.com/twitter/finatra/commit/ffb644e5612b81602f7c653e69a8bf99b5c3eaa3"&gt;ffb644e5&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;&lt;a href="https://github.com/twitter/scrooge/"&gt;Scrooge&lt;/a&gt;&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;scrooge: Finally remove maven.twttr.com as a dependency or plugin repository. With
-the update to a more recent libthrift dependency, this should no longer be necessary.
-&lt;a href="https://github.com/twitter/scrooge/commit/44db8e16d0afbc90018a968f268d209068bf2bfc"&gt;44db8e16&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;&lt;a href="https://github.com/twitter/twitter-server/"&gt;Twitter Server&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;No Changes&lt;/p&gt;
-
-&lt;h3&gt;&lt;a href="https://github.com/twitter/util/"&gt;Util&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h4&gt;Breaking API Changes&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;util-core: c.t.io.Writer now extends c.t.util.Closable. c.t.io.Writer.ClosableWriter
-is no longer exist. &lt;a href="https://github.com/twitter/util/commit/9cc7025c52f8d52acc0ccc7f3f713103bf8fcd6a"&gt;9cc7025c&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;Bug Fixes&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;util-slf4j-api: Moved slf4j-simple dependency to be a &amp;lsquo;test&amp;rsquo; dependency, instead of a
-compile dependency, which was inaccurate. &lt;a href="https://github.com/twitter/util/commit/3d6d7457d34055a9e9c86ffd112cc477fd557e0f"&gt;3d6d7457&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>⛱️ September 2018 Release Notes 🐚 — Version 18.9.0</title>
-    <link rel="alternate" href="https://finagle.github.io/blog/2018/09/18/release-notes/"/>
-    <id>https://finagle.github.io/blog/2018/09/18/release-notes/</id>
-    <published>2018-09-18T00:00:00Z</published>
-    <updated>2018-11-13T10:01:57-07:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;September is beach season here in the Bay Area! Time to finally get out to the beach and
-cut fresh new versions of our libraries.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/twitter/finagle/releases/tag/finagle-18.9.0"&gt;Finagle 18.9.0&lt;/a&gt;,
-&lt;a href="https://github.com/twitter/finatra/releases/tag/finatra-18.9.0"&gt;Finatra 18.9.0&lt;/a&gt;,
-&lt;a href="https://github.com/twitter/scrooge/releases/tag/scrooge-18.9.0"&gt;Scrooge 18.9.0&lt;/a&gt;,
-&lt;a href="https://github.com/twitter/twitter-server/releases/tag/twitter-server-18.9.0"&gt;TwitterServer 18.9.0&lt;/a&gt;,
-and &lt;a href="https://github.com/twitter/util/releases/tag/util-18.9.0"&gt;Util 18.9.0&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3&gt;&lt;a href="https://github.com/twitter/finagle/"&gt;Finagle&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h4&gt;New Features&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;finagle-core: &lt;code&gt;c.t.f.FailureFlags&lt;/code&gt; is now a public API. This is Finagle&amp;rsquo;s
-API for attaching metadata to an exception. As an example this is used to
-check if an exception is known to be safe to retry. Java compatibility has
-also been added. &lt;a href="https://github.com/twitter/finagle/commit/e6389831e527b8634de82ecbb275705578c0f688"&gt;e6389831&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;finagle-core: Introducing StackTransformer, a consistent mechanism for
-accessing and transforming the default ServerStack. &lt;a href="https://github.com/twitter/finagle/commit/0b6844cdfbc176a499b908d8cf71b171b3aac2d0"&gt;0b6844cd&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;finagle-netty4: Allow sockets to be configured with the &lt;a href="http://lwn.net/Articles/542629/"&gt;SO_REUSEPORT&lt;/a&gt; option
-when using native epoll, which allows multiple processes to bind and accept connections
-from the same port. &lt;a href="https://github.com/twitter/finagle/commit/0316ac8940f056b86e3d5463ba63b6033a539886"&gt;0316ac89&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;Breaking API Changes&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;finagle-core: &lt;code&gt;Address.hashOrdering&lt;/code&gt; now takes a seed parameter and
-&lt;code&gt;PeerCoordinate.setCoordinate&lt;/code&gt; does not take a &lt;code&gt;peerOffset&lt;/code&gt; any longer.
-&lt;a href="https://github.com/twitter/finagle/commit/9e6734b21f55d0aed95e33dc299ce05b3c524748"&gt;9e6734b2&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;finagle-core: Removed deprecated members &lt;code&gt;c.t.f.Failure.{Interrupted, Ignorable, DeadlineExceeded,
-Rejected, NonRetryable, flagsOf}&lt;/code&gt;. &lt;a href="https://github.com/twitter/finagle/commit/54435221ae361b3eef3fe0b4b6846099f1504421"&gt;54435221&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;finagle-core: SingletonPool now takes an additional parameter which indicates if interrupts
-should propagate to the underlying resource. &lt;a href="https://github.com/twitter/finagle/commit/c83ad5d1a3727ee8a8638bff8669cf37edecbeab"&gt;c83ad5d1&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;finagle-core: Remove &lt;code&gt;TimeoutFactory.Role&lt;/code&gt; in favor of passing a role to the &lt;code&gt;module&lt;/code&gt; function.
-Since this module is a re-used within the client stack, it needs unique identifiers for each
-distinct module. &lt;a href="https://github.com/twitter/finagle/commit/4c46b80d69108e079c7761425504d19647f152fd"&gt;4c46b80d&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;finagle-core: the valid range for the argument to &lt;code&gt;WindowedPercentileHistogram.percentile&lt;/code&gt;
-is now [0.0..1.0], e.g., 0.95 means 95th percentile. &lt;a href="https://github.com/twitter/finagle/commit/8ad96f9619a889f93195e44b7f3be27c0cfebfd3"&gt;8ad96f96&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;finagle-mux: The old pull-based mux implementations have been removed. &lt;a href="https://github.com/twitter/finagle/commit/d1baeff95b7e464e2827d8800da6a3ef65526128"&gt;d1baeff9&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;finagle-netty3: The type of context of a &lt;code&gt;ChannelTransport&lt;/code&gt; has been changed from a
-&lt;code&gt;LegacyContext&lt;/code&gt; to a &lt;code&gt;ChannelTransportContext&lt;/code&gt;. &lt;a href="https://github.com/twitter/finagle/commit/4cdd15d91180e3a05369063061cee213b3642e69"&gt;4cdd15d9&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;finagle-netty4: The type of context of a &lt;code&gt;ChannelTransport&lt;/code&gt; has been changed from a
-&lt;code&gt;Netty4Context&lt;/code&gt; to a &lt;code&gt;ChannelTransportContext&lt;/code&gt;. &lt;a href="https://github.com/twitter/finagle/commit/edce8093e8e741b4b3f671702298ed4b06fb8735"&gt;edce8093&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;finagle-netty4: &lt;code&gt;c.t.f.netty4.param.useUnpoolledByteBufAllocator&lt;/code&gt; flag has been removed. There is
-no good reason to opt-out of a more efficient, pooled allocator. &lt;a href="https://github.com/twitter/finagle/commit/07495a14672ff871a892355f1fcb0372c201dc48"&gt;07495a14&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;finagle-thrift: &lt;code&gt;DeserializeCtx&lt;/code&gt; became &lt;code&gt;ClientDeserializeCtx&lt;/code&gt; for client side response
-classification, add &lt;code&gt;ServerDeserializeCtx&lt;/code&gt; to handle server side response classification.
-&lt;a href="https://github.com/twitter/finagle/commit/a8be34bdff98c794482f536ed6dd6432b7c23f06"&gt;a8be34bd&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;finagle-serversets: &lt;code&gt;ZkMetadata.shardHashOrdering&lt;/code&gt; now takes a seed parameter.
-&lt;a href="https://github.com/twitter/finagle/commit/9e6734b21f55d0aed95e33dc299ce05b3c524748"&gt;9e6734b2&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;Bug Fixes&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;finagle-thrift: Thrift clients created via &lt;code&gt;.servicePerEndpoint&lt;/code&gt; now propagate exceptions
-appropriately when the method return type is void. &lt;a href="https://github.com/twitter/finagle/commit/bb2654e13674a2e6304be2354caa02387df52589"&gt;bb2654e1&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;finagle-thrift, finagle-thriftmux: Response classification is enabled in server side.
-&lt;a href="https://github.com/twitter/finagle/commit/a8be34bdff98c794482f536ed6dd6432b7c23f06"&gt;a8be34bd&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;Runtime Behavior Changes&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;finagle-memcached: A Memcached client (&lt;code&gt;c.t.f.Memcached.Client&lt;/code&gt;) is now backed by a more efficient,
-push-based implementation. &lt;a href="https://github.com/twitter/finagle/commit/c0a1f295f58d699a77142ea2720965b63203cc89"&gt;c0a1f295&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;finagle-netty4: Finagle&amp;rsquo;s Netty 4 implementation now defaults to use Linux&amp;rsquo;s native epoll
-transport, when available. Run with &lt;code&gt;-com.twitter.finagle.netty4.useNativeEpoll=false&lt;/code&gt; to opt out.
-&lt;a href="https://github.com/twitter/finagle/commit/137f56721fd7aa750101aee29203649d6f0e539c"&gt;137f5672&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;&lt;a href="https://github.com/twitter/finatra/"&gt;Finatra&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h4&gt;Changed&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;inject-core: Remove unnecessary Await.result Future.Value in TestMixin. &lt;a href="https://github.com/twitter/finatra/commit/1616188cfb5414efa47d28618bde3b90abba0e63"&gt;1616188c&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;&lt;a href="https://github.com/twitter/scrooge/"&gt;Scrooge&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h4&gt;New Features&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;scrooge-generator: Scala and Java generated Thrift exceptions now implement &lt;code&gt;c.t.f.FailureFlags&lt;/code&gt;.
-This allows exceptions to carry Finagle metadata such as non-retryable. &lt;a href="https://github.com/twitter/scrooge/commit/438599b0b15fb3c2bbdcf302fe18046a530071b1"&gt;438599b0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;&lt;a href="https://github.com/twitter/twitter-server/"&gt;Twitter Server&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h4&gt;Runtime Behavior Changes&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Move logic to parse the server &lt;code&gt;build.properties&lt;/code&gt; file out the &lt;code&gt;c.t.server.handler.ServerInfoHandler&lt;/code&gt;
-and into a utility object, &lt;code&gt;c.t.server.BuildProperties&lt;/code&gt; to allow for accessing by other server
-logic such that the properties do not need to be re-parsed anytime access is desired. Failure to
-load the properties can result in the server not starting in the case of a Fatal exception
-being thrown. &lt;a href="https://github.com/twitter/twitter-server/commit/4c193594053cd332ef2ff1602df82ad948024a7e"&gt;4c193594&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Update &lt;code&gt;TwitterServer&lt;/code&gt; trait to override the inherited &lt;code&gt;ShutdownTimer&lt;/code&gt; to be the Finagle
-&lt;code&gt;DefaultTimer&lt;/code&gt; instead of the &lt;code&gt;c.t.util.JavaTimer&lt;/code&gt; defined by default in &lt;code&gt;c.t.app.App&lt;/code&gt;. Also
-update the overridden &lt;code&gt;suppressGracefulShutdownErrors&lt;/code&gt; in &lt;code&gt;TwitterServer&lt;/code&gt; to be a val since
-it is constant (instead of a def). &lt;a href="https://github.com/twitter/twitter-server/commit/944b7294eea62769cc53e30f6ecab91a243fe444"&gt;944b7294&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;&lt;a href="https://github.com/twitter/util/"&gt;Util&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h4&gt;New Features&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;util-logging: New way to construct &lt;code&gt;ScribeHandler&lt;/code&gt; for java interoperability.
-&lt;a href="https://github.com/twitter/util/commit/845620b48ea27c815b55ce1a7ce4deb54a1b2532"&gt;845620b4&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;util-core: Added Reader#fromAsyncStream for consuming an &lt;code&gt;AsyncStream&lt;/code&gt; as a &lt;code&gt;Reader&lt;/code&gt;.
-&lt;a href="https://github.com/twitter/util/commit/39ec9849814642fb46d0604f3da8aaa2437574ff"&gt;39ec9849&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;util-core: Introducing &lt;code&gt;Reader.chunked&lt;/code&gt; that chunks the output of a given reader.
-&lt;a href="https://github.com/twitter/util/commit/1a7c54f96e23e0d9c66bace6cae23b7e2f21a3a8"&gt;1a7c54f9&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;util-core: Added Reader#framed for consuming data framed by a user supplied function.
-&lt;a href="https://github.com/twitter/util/commit/2316aa5dcf68780d125124d9eb7cf62ba585844a"&gt;2316aa5d&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;util-security: Add &lt;code&gt;NullSslSession&lt;/code&gt; related objects for use with non-existent
-&lt;code&gt;SSLSession&lt;/code&gt;s.  f&lt;a href="https://github.com/twitter/util/commit/12de479fa6cf7b13afdf9d2458a1bd5b01499d43"&gt;12de479f&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;util-tunable: Introducing &lt;code&gt;Tunable.asVar&lt;/code&gt; that allows observing changes to tunables.
-&lt;a href="https://github.com/twitter/util/commit/94864832a593f5f75c696c8dab913ceba69e81dc"&gt;94864832&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;Breaking API Changes&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;util-core: &lt;code&gt;c.t.io.Reader&lt;/code&gt; and &lt;code&gt;c.t.io.Writer&lt;/code&gt; are now abstracted over the type
-they produce/consume (&lt;code&gt;Reader[A]&lt;/code&gt; and &lt;code&gt;Writer[A]&lt;/code&gt;) and are no longer fixed to &lt;code&gt;Buf&lt;/code&gt;.
-&lt;a href="https://github.com/twitter/util/commit/7718fa298ab87e7843a5f6f136b7f92a4398561d"&gt;7718fa29&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;util-core: &lt;code&gt;InMemoryStatsReceiver&lt;/code&gt; now eagerly creates the mappings for &lt;code&gt;Counters&lt;/code&gt;
-and &lt;code&gt;Stats&lt;/code&gt; instead of waiting for the first call to &lt;code&gt;Counter.incr&lt;/code&gt; and &lt;code&gt;Stat.add&lt;/code&gt;.
-&lt;a href="https://github.com/twitter/util/commit/97f0f0faa8ab1ceb8fca8743d2b4b21d26b5769d"&gt;97f0f0fa&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;util-core: &lt;code&gt;c.t.io.Reader.Writable&lt;/code&gt; is now &lt;code&gt;c.t.io.Pipe&lt;/code&gt;. Both &lt;code&gt;Writable&lt;/code&gt; type and
-its factory method are deprecated; use &lt;code&gt;new Pipe[A]&lt;/code&gt; instead.  &lt;a href="https://github.com/twitter/util/commit/cbff976029b23dc9c8d7b3b6c497b49e0a6547ad"&gt;cbff9760&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;util-slf4j-api: Ensure that marker information is used when determining if log
-level is enabled for methods which support markers. &lt;a href="https://github.com/twitter/util/commit/02d80820c041009511e40c36e382b9ac5572f698"&gt;02d80820&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;util-slfj4-api: Finalize the underlying logger def in the Logging trait as it is not
-expected that this be overridable. If users wish to change how the underlying logger is
-constructed they should simply use the Logger and its methods directly rather than
-configuring the the underlying logger of the Logging trait.
-Add better Java compatibility for constructing a Logger. &lt;a href="https://github.com/twitter/util/commit/56569b9f4226b65b32d4e3f0079515b6d5542816"&gt;56569b9f&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </content>
   </entry>
 </feed>
